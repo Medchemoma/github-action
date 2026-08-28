@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: print welcome message
         run: echo "welcome to github"
+      - name: Checkout
+      - uses: actions/checkout@v4.4.0
+      
+      - name: chekout files
+        run: ls -la
 
    
    
