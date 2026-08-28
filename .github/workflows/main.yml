@@ -1,4 +1,4 @@
-naname: First workflows
+name:  First workflows
 
 on:
   push:
