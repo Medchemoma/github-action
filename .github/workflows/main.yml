@@ -2,13 +2,13 @@ name: First workflows
 on: 
    push:
       branches: 
-      - main
+         - main
 jobs:
    exemples-jobs:
-   runs-on: ubuntu:latest
+     runs-on: ubuntu:latest
    steps:
-   name: print welcom message
-   run : echo"welcom to github"
+     -name: print welcom message
+      run: echo "welcom to github"
 
    
    
