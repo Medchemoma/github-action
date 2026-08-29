@@ -6,10 +6,16 @@ on:
       - "release/**"
     paths:
       - "src/**"
+      - "package.json"
+      - "test.sh"
   pull_request:
     branches:
       - main
       - "release/**"
+    paths:
+      - "src/**"
+      - "package.json"
+      - "test.sh"
 jobs:
   test-job:
     runs-on: ubuntu-latest
