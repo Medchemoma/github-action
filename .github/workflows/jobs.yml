@@ -1,23 +1,26 @@
-on: 
-   workflow_call:
+on:
+  workflow_call:
+
 jobs:
-   jobs1:
-     runs-on: ubuntu-latest
-     steps:
-        - run: " echo Job ${{github.job}}"
-    jobs2:
-     runs-on: ubuntu-latest
-     needs: jobs1
-     steps:
-        - run: " echo Job ${{github.job}}"
-    jobs3:
-     runs-on: ubuntu-latest
-     needs: jobs1
-     steps:
-        - run: " echo Job ${{github.job}}" 
-     jobs4:
-     runs-on: ubuntu-latest
-     needs: [jobs2, jobs3]
-     steps:
-        - run: " echo Job ${{github.job}}" 
-        
+  jobs1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job ${{ github.job }}"
+
+  jobs2:
+    runs-on: ubuntu-latest
+    needs: jobs1
+    steps:
+      - run: echo "Job ${{ github.job }}"
+
+  jobs3:
+    runs-on: ubuntu-latest
+    needs: jobs1
+    steps:
+      - run: echo "Job ${{ github.job }}"
+
+  jobs4:
+    runs-on: ubuntu-latest
+    needs: [jobs2, jobs3]
+    steps:
+      - run: echo "Job ${{ github.job }}"
